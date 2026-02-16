@@ -44,21 +44,27 @@ export default function Navbar() {
               className={`relative group ${isActive("#features") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Features
-              <span className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#features") ? "w-0" : ""}`}></span>
+              <span
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#features") ? "w-0" : ""}`}
+              ></span>
             </Link>
             <Link
               href="#how-it-works"
               className={`relative group ${isActive("#how-it-works") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               How it Works
-              <span className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}></span>
+              <span
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
+              ></span>
             </Link>
             <Link
               href="#"
               className={`relative group ${isActive("#") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               FAQ
-              <span className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#") ? "w-0" : ""}`}></span>
+              <span
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#") ? "w-0" : ""}`}
+              ></span>
             </Link>
           </div>
 
@@ -66,13 +72,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-2.5 hover:text-[#F3B659] hover:bg-transparent rounded-md transition-colors relative group overflow-hidden`}
+              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-2.5  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}
             >
               <span className="relative z-10">Log in</span>
             </Link>
             <Link
               href="/signup"
-              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-2.5 rounded-md font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
+              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-2.5 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
             >
               Create Account
             </Link>
