@@ -58,12 +58,12 @@ export default function Navbar() {
               ></span>
             </Link>
             <Link
-              href="#"
-              className={`relative group ${isActive("#") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+              href="#faq"
+              className={`relative group ${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
-              FAQ
+              FAQs
               <span
-                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#") ? "w-0" : ""}`}
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#faq") ? "w-0" : ""}`}
               ></span>
             </Link>
           </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FAQ from "../components/FAQ";
 import HeroImage from "../components/HeroImage";
 import {
   ShieldCheck,
@@ -224,6 +225,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQ />
 
         {/* CTA Section */}
         <section className="py-20 bg-[#0B493A]">
