@@ -142,7 +142,7 @@ export default function Home() {
                   alt="How it works illustration"
                   width={600}
                   height={500}
-                  className="w-full h-auto"
+                  className="w-full h-auto shadow-lg rounded-xl"
                 />
               </div>
               <div className="order-1 lg:order-2">
