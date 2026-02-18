@@ -249,13 +249,13 @@ export default function Home() {
             </p>
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-all shadow-lg shadow-blue-600/20"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full "
             >
               Get Started Now
             </Link>
             <button
               onClick={() => setIsWaitlistOpen(true)}
-              className="ml-4 inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-all"
+              className=" ml-4 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full mt-4 md:mt-0"
             >
               Join the Waitlist
             </button>
