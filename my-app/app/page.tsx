@@ -12,9 +12,17 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import { useState } from "react";
+import WaitlistModal from "../components/WaitlistModal";
 export default function Home() {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
+      <WaitlistModal 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
       <Navbar />
 
       <main>
@@ -245,6 +253,12 @@ export default function Home() {
             >
               Get Started Now
             </Link>
+            <button
+              onClick={() => setIsWaitlistOpen(true)}
+              className="ml-4 inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-all"
+            >
+              Join the Waitlist
+            </button>
           </div>
         </section>
       </main>

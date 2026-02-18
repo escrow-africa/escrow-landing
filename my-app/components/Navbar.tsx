@@ -23,20 +23,23 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <div className="relative h-8 w-auto aspect-[3/1]">
+              <div className="relative h-8 w-auto aspect-[3/1] flex items-center gap-1">
                 <Image
-                  src="/escrow logo1.png"
+                  src="/logo.png"
                   alt="Escrow Logo"
-                  width={100}
-                  height={40}
-                  className="object-contain"
+                  width={35}
+                  height={50}
+                  className="object-contain shadow-lg "
                   priority
                 />
+                <div className="font-bold">
+                  <p className="text-white">Escrow</p>
+                  <span className="text-[#F3B659]">Africa</span>
+                </div>
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ">
             <Link
@@ -72,13 +75,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-2.5  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}
+              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-1  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}
             >
               <span className="relative z-10">Log in</span>
             </Link>
             <Link
               href="/signup"
-              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-2.5 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
+              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
             >
               Create Account
             </Link>
