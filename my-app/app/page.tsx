@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FAQ from "../components/FAQ";
 import HeroImage from "../components/HeroImage";
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Zap,
@@ -99,9 +100,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Feature 1 */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="relative overflow-hidden">
+              <motion.div
+            className="flex gap-8"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          >
+              <div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow max-w-sm">
   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
     <ShieldCheck className="w-6 h-6" />
   </div>
@@ -113,21 +118,19 @@ export default function Home() {
   </p>
 </div>
 
-              {/* Feature 2 */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-green-600">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Fast Processing
-                </h3>
-                <p className="text-gray-600">
-                  Automated workflows ensure quick release of funds once
-                  conditions are met, keeping your business moving.
-                </p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+<div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-green-600">
+    <Zap className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Fast Processing
+  </h3>
+  <p className="text-gray-600">
+    Automated workflows ensure quick release of funds once conditions are met, keeping your business moving.
+  </p>
+</div>
+
+<div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
     <Scale className="w-6 h-6" />
   </div>
@@ -139,7 +142,7 @@ export default function Home() {
   </p>
 </div>
 
-<div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+<div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
     <Globe className="w-6 h-6" />
   </div>
@@ -151,8 +154,7 @@ export default function Home() {
   </p>
 </div>
 
-              {/* Feature 3 */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+<div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
     <Briefcase className="w-6 h-6" />
   </div>
@@ -164,7 +166,7 @@ export default function Home() {
   </p>
 </div>
 
-<div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+<div className="w-80 flex-shrink-0 h-65 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
     <Smartphone className="w-6 h-6" />
   </div>
@@ -175,8 +177,11 @@ export default function Home() {
     Simple, intuitive experience built for seamless mobile transactions.
   </p>
 </div>
+</motion.div>
             </div>
+            
           </div>
+          
         </section>
 
         {/* How It Works Section */}

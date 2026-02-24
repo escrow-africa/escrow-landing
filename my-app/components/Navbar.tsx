@@ -51,20 +51,21 @@ export default function Navbar() {
                 className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#features") ? "w-0" : ""}`}
               ></span>
             </Link>
-            <Link
-              href="#Why-Choose-Us"
-              className={`relative group ${isActive("#Why-Choose-Us") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
-            >
-              Why Choose Us
-              <span
-                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
-              ></span>
-            </Link>
+           
             <Link
               href="#Workflows"
               className={`relative group ${isActive("#Workflows") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Workflows
+              <span
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
+              ></span>
+            </Link>
+             <Link
+              href="#teams"
+              className={`relative group ${isActive("#teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+            >
+              Team
               <span
                 className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
               ></span>
