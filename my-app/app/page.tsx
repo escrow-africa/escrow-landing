@@ -11,6 +11,10 @@ import {
   Globe,
   ArrowRight,
   CheckCircle2,
+  Scale,
+  Smartphone,
+  
+  Briefcase,
 } from "lucide-react";
 import { useState } from "react";
 import WaitlistModal from "../components/WaitlistModal";
@@ -71,10 +75,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative lg:h-auto">
-                {/* Main Hero Visual */}
+               
                 <HeroImage />
 
-                {/* Decorative elements */}
+               
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
               </div>
@@ -98,17 +102,16 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Feature 1 */}
               <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Maximum Security
-                </h3>
-                <p className="text-gray-600">
-                  Funds are held securely in a trust account until all terms of
-                  the transaction are met and verified.
-                </p>
-              </div>
+  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+    <ShieldCheck className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Bank-Grade Security
+  </h3>
+  <p className="text-gray-600">
+    Advanced encryption protects every transaction from start to finish.
+  </p>
+</div>
 
               {/* Feature 2 */}
               <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -123,20 +126,55 @@ export default function Home() {
                   conditions are met, keeping your business moving.
                 </p>
               </div>
+              
+              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+    <Scale className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Fair Dispute Resolution
+  </h3>
+  <p className="text-gray-600">
+    Independent mediation ensures both parties are protected.
+  </p>
+</div>
+
+<div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+    <Globe className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Built for Africa
+  </h3>
+  <p className="text-gray-600">
+    Designed around African markets, currencies, and trade realities.
+  </p>
+</div>
 
               {/* Feature 3 */}
               <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
-                  <Globe className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Global Reach
-                </h3>
-                <p className="text-gray-600">
-                  Support for multiple currencies and payment methods, allowing
-                  you to do business worldwide.
-                </p>
-              </div>
+  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+    <Briefcase className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Perfect for SMEs
+  </h3>
+  <p className="text-gray-600">
+    Ideal for online sellers, freelancers, and growing businesses.
+  </p>
+</div>
+
+<div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+    <Smartphone className="w-6 h-6" />
+  </div>
+  <h3 className="text-xl font-bold text-gray-900 mb-3">
+    Mobile-First Platform
+  </h3>
+  <p className="text-gray-600">
+    Simple, intuitive experience built for seamless mobile transactions.
+  </p>
+</div>
             </div>
           </div>
         </section>
@@ -234,7 +272,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+
         <FAQ />
 
         {/* CTA Section */}
