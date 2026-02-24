@@ -100,7 +100,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden">
+            {/* <div className="relative overflow-hidden">
               <motion.div
             className="flex gap-8"
             animate={{ x: ["0%", "-50%"] }}
@@ -178,7 +178,73 @@ export default function Home() {
   </p>
 </div>
 </motion.div>
-            </div>
+            </div> */}
+            <div className="relative overflow-hidden">
+  <motion.div
+    className="flex gap-8"
+    animate={{ x: ["0%", "-50%"] }}
+    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+  >
+    <div className="card">
+      <div className="card-icon bg-blue-100">
+        <ShieldCheck className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Bank-Grade Security</h3>
+      <p className="text-gray-600">
+        Advanced encryption protects every transaction from start to finish.
+      </p>
+    </div>
+
+    <div className="card">
+      <div className="card-icon bg-green-100 text-green-600">
+        <Zap className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Processing</h3>
+      <p className="text-gray-600">
+       Automated workflows ensure quick release of funds once conditions are met, keeping your business moving.
+      </p>
+    </div>
+
+    <div className="card">
+      <div className="card-icon bg-blue-100">
+        <Scale className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Fair Dispute Resolution</h3>
+      <p className="text-gray-600">
+        Independent mediation ensures both parties are protected.
+      </p>
+    </div>
+     <div className="card">
+      <div className="card-icon bg-blue-100">
+        <Globe className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Built for Africa</h3>
+      <p className="text-gray-600">
+Designed around African markets, currencies, and trade realities.
+      </p>
+    </div>
+     <div className="card">
+      <div className="card-icon bg-blue-100">
+        <Briefcase className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Perfect for SMEs</h3>
+      <p className="text-gray-600">
+         Ideal for online sellers, freelancers, and growing businesses.
+      </p>
+    </div>
+     <div className="card">
+      <div className="card-icon bg-blue-100">
+        <Smartphone className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Mobile-First Platform</h3>
+      <p className="text-gray-600">
+       Simple, intuitive experience built for seamless mobile transactions.
+      </p>
+    </div>
+
+    
+  </motion.div>
+</div>
             
           </div>
           
@@ -203,21 +269,18 @@ export default function Home() {
                 </h2>
                 <div className="space-y-8">
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
-                      <img src="/escrow logo 32.png" alt="logo" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Buyer and Seller Agree to Terms
-                      </h3>
-                      <p className="text-gray-600">
-                        Both parties agree to the terms of the transaction,
-                        including price, merchandise description, and shipping.
-                      </p>
-                    </div>
-                  </div>
+  <div className="step-icon">
+    <img src="/escrow logo 32.png" alt="logo" />
+  </div>
+  <div>
+    <h3 className="text-xl font-bold text-gray-900 mb-2">Buyer and Seller Agree to Terms</h3>
+    <p className="text-gray-600">
+      Both parties agree to the terms of the transaction, including price, merchandise description, and shipping.
+    </p>
+  </div>
+</div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                    <div className="step-icon">
                       <img src="/escrow logo 32.png" alt="logo" />
                     </div>
                     <div>
@@ -231,7 +294,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                    <div className="step-icon">
                       <img src="/escrow logo 32.png" alt="logo" />
                     </div>
                     <div>
@@ -245,7 +308,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                    <div className="step-icon">
                       <img src="/escrow logo 32.png" alt="logo" />
                     </div>
                     <div>
@@ -259,7 +322,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
+                    <div className="step-icon">
                       <img src="/escrow logo 32.png" alt="logo" />
                     </div>
                     <div>
