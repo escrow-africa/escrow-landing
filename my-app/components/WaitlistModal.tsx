@@ -19,7 +19,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
 
   const onDismiss = useCallback(() => {
     onClose();
-    // Reset form after a delay to allow animation to finish
+   
     setTimeout(() => {
       setSubmitted(false);
       setName("");

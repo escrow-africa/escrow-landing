@@ -28,17 +28,15 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Escrow Africa",
   description: "Secure, Fast, and Reliable Escrow Services",
-  icons: {
-    icon: "/4.png",
-  },
+ 
 };
 
 export default function RootLayout({
   children,
-  auth,
+  
 }: Readonly<{
   children: React.ReactNode;
-  auth: React.ReactNode;
+ 
 }>) {
   return (
     <html lang="en">
@@ -46,7 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased font-sans`}
       >
         {children}
-        {auth}
+        
       </body>
     </html>
   );
