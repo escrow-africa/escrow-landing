@@ -12,17 +12,15 @@ import WorkFlow from "@/components/Workflow";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white">
       <Navbar />
-      <main>
-      <Hero />
+     <Hero />
       <Features/>
       <HowItWorks />
       <FAQ />
-      <WorkFlow />
+        <WorkFlow /> 
       <CTA />
-
-      </main>
+     
       <Footer />
     </div>
   );

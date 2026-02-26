@@ -53,8 +53,8 @@ export default function Navbar() {
             </Link>
            
             <Link
-              href="#Workflows"
-              className={`relative group ${isActive("#Workflows") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+              href="#workflows"
+              className={`relative group ${isActive("#workflows") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Workflows
               <span
