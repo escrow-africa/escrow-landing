@@ -27,12 +27,15 @@ body {
 
 /* Card styles used for features / marquee */
 .card {
-  @apply w-80 flex-shrink-0 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow;
+  @apply w-80 flex-shrink-0 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ;
+ 
 }
+
 
 /* Icon wrapper inside cards */
 .card-icon {
   @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-blue-600;
+ 
 }
 
 /* Step icon in How It Works */

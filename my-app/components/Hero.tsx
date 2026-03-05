@@ -1,4 +1,4 @@
-import HeroImage from "../components/HeroImage";
+
 import {
   
   ArrowRight,
@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
     return (
@@ -55,11 +56,10 @@ const Hero = () => {
               </div>
               <div className="relative lg:h-auto">
                
-                <HeroImage />
+               <Image src="/landpage-mockup.png" alt="Hero Image" width={500} height={500} className="w-full h-auto object-contain shadow-lg rounded-lg" />
 
                
-                <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-                <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+                
               </div>
             </div>
           </div>
