@@ -3,10 +3,7 @@ import { useState } from "react";
 import WaitlistModal from "../components/WaitlistModal";
 const CTA = () => {
     const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-    <WaitlistModal 
-                isOpen={isWaitlistOpen} 
-                onClose={() => setIsWaitlistOpen(false)} 
-              />
+    
     return(
         
         <section className="py-20 bg-[#0B493A]">
@@ -24,14 +21,21 @@ const CTA = () => {
             >
               Get Started Now
             </Link>
+            
             <button
-              onClick={() => setIsWaitlistOpen(true)}
+             onClick={() => setIsWaitlistOpen(true)}
               className=" ml-4 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full mt-4 md:mt-0"
             >
               Join the Waitlist
-            </button>
+              </button>
+            
           </div>
+           <WaitlistModal 
+                isOpen={isWaitlistOpen} 
+                onClose={() => setIsWaitlistOpen(false)} 
+              />
         </section>
+        
     )
 }
 export default CTA;
