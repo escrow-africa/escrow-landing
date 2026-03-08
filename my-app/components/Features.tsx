@@ -296,7 +296,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 lg:py-15">
+    <section id="why-escrow" className="py-20 lg:py-15">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
