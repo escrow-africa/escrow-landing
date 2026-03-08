@@ -210,6 +210,7 @@ const Hero = () => {
               alt="Hero Image"
               width={500}
               height={500}
+              priority
               className="w-full h-auto object-contain shadow-lg rounded-lg"
             />
           </div>

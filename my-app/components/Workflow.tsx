@@ -49,12 +49,12 @@ const WorkFlow = () => {
         </h2>
 
         {/* Cards container */}
-        <div className="flex justify-center gap-6 overflow-x-auto lg:overflow-hidden">
+        <div className="flex lg:justify-center gap-6 overflow-x-auto lg:overflow-hidden  px-4 scroll-smooth snap-x snap-mandatory">
 
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md flex-shrink-0 w-[220px] lg:w-[200px] p-4 text-center"
+              className="bg-white rounded-xl shadow-md flex-shrink-0 w-[220px]  p-4 text-center snap-center"
             >
               <div className="flex justify-center mb-3">
                 <Image
