@@ -118,18 +118,18 @@ export default function Navbar() {
             {isOpen && (
               <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
                 <Link
-                  href="#features"
-                  className={`${isActive("#features") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} 
+                  href="#why-escrow"
+                  className={`${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} 
                   onClick={toggleMenu}
                 >
-                  Features
+                 Why Escrow
                 </Link>
                 <Link
-                  href="#workflows"
-                  className={`${isActive("#workflows") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  href="#our-services"
+                  className={`${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
-                  Workflows
+                  Our Services
                 </Link>
                 <Link
                   href="#teams"
