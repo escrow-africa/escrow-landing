@@ -116,17 +116,46 @@ export default function Navbar() {
               )}
             </button>
             {isOpen && (
-              <div className="  absolute top-16 left-46  w-[50%] bg-[#062B22] rounded-md h-30 border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
+              <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
                 <Link
-                  href="/login"
-                  className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  href="#features"
+                  className={`${isActive("#features") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} 
                   onClick={toggleMenu}
                 >
+                  Features
+                </Link>
+                <Link
+                  href="#workflows"
+                  className={`${isActive("#workflows") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  onClick={toggleMenu}
+                >
+                  Workflows
+                </Link>
+                <Link
+                  href="#teams"
+                  className={`${isActive("#teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  onClick={toggleMenu}
+                >
+                  Teams
+                </Link>
+
+                <Link href="#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                  FAQs
+                </Link>
+                  <Link href="/blog" className={`${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                  Blog
+                </Link>
+                <Link
+                  href="/login"
+                  className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
+                  onClick={toggleMenu}
+                >
+                  
                   Log In
                 </Link>
                 <Link
                   href="/signup"
-                  className={`${isActive("/signup") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  className={`${isActive("/signup") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
                   onClick={toggleMenu}
                 >
                   Create Account
