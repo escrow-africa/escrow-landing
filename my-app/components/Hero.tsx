@@ -206,7 +206,8 @@ const Hero = () => {
           {/* RIGHT */}
           <div className="relative lg:h-auto">
             <Image
-              src="/landpage-mockup.png"
+              src="/mockup.jpeg"
+            
               alt="Hero Image"
               width={500}
               height={500}

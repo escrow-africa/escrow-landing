@@ -43,15 +43,15 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ">
             <Link
-              href="#why-escrow"
-              className={`relative group ${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+              href="/about"
+              className={`relative group ${isActive("/about") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
-              Why Escrow
+              About Us
               <span
                 className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#features") ? "w-0" : ""}`}
               ></span>
             </Link>
-           
+
             <Link
               href="#our-services"
               className={`relative group ${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
@@ -61,7 +61,7 @@ export default function Navbar() {
                 className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
               ></span>
             </Link>
-             <Link
+            <Link
               href="#team"
               className={`relative group ${isActive("#team") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
@@ -119,10 +119,10 @@ export default function Navbar() {
               <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
                 <Link
                   href="#why-escrow"
-                  className={`${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} 
+                  className={`${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
-                 Why Escrow
+                  Why Escrow
                 </Link>
                 <Link
                   href="#our-services"
@@ -142,7 +142,7 @@ export default function Navbar() {
                 <Link href="#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
                   FAQs
                 </Link>
-                  <Link href="/blog" className={`${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                <Link href="/blog" className={`${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
                   Blog
                 </Link>
                 <Link
@@ -150,7 +150,7 @@ export default function Navbar() {
                   className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
                   onClick={toggleMenu}
                 >
-                  
+
                   Log In
                 </Link>
                 <Link

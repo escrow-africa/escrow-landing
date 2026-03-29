@@ -17,6 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 import { Montserrat } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,23 +30,25 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Escrow Africa",
   description: "Secure, Fast, and Reliable Escrow Services",
- 
+
 };
 
 export default function RootLayout({
   children,
-  
+
 }: Readonly<{
   children: React.ReactNode;
- 
+
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased font-sans`}
       >
+        <Navbar />
         {children}
-        
+        <Footer />
+
       </body>
     </html>
   );
