@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+
 
 const faqs = [
   {
@@ -74,6 +76,16 @@ export default function FAQ() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/faqs"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-white border border-gray-200 text-[#062B22] text-sm font-semibold rounded-full hover:border-[#F3B659] hover:text-[#F3B659] shadow-sm hover:shadow transition-all group"
+          >
+            More FAQs
+            <FontAwesomeIcon icon={faArrowRight} className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

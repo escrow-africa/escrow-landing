@@ -172,16 +172,16 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/signup"
+              <a
+                href="http://localhost:3000/signup"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-all shadow-lg shadow-blue-600/20"
               >
                 Start a Transaction
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+              </a>
 
               <Link
-                href="#how-it-works"
+                href="/#how-it-works"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#F3B659] bg-[#0B493A] hover:bg-[#F3B659] hover:text-[#0B493A] rounded-full transition-all"
               >
                 How it Works

@@ -49,14 +49,13 @@ const WorkFlow = () => {
         </h2>
 
         {/* Cards container */}
-        <div className="flex lg:justify-center gap-6 overflow-x-auto lg:overflow-hidden  px-4 scroll-smooth snap-x snap-mandatory">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md flex-shrink-0 w-[220px]  p-4 text-center snap-center"
+              className="bg-white rounded-xl shadow-md p-6 text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-4">
                 <Image
                   src={card.img}
                   alt={card.alt}
@@ -66,21 +65,15 @@ const WorkFlow = () => {
                 />
               </div>
 
-              <h3 className="text-md font-semibold text-black mb-2">
+              <h3 className="text-lg font-semibold text-black mb-3">
                 {card.title}
               </h3>
 
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 leading-relaxed">
                 {card.description}
               </p>
             </div>
           ))}
-
-        </div>
-        <div className="flex gap-3 mt-3 text-center lg:hidden justify-center">
-          <MoveLeft color="#F3B659" />
-          <h1 className="text-[#F3B659] font-bold">swipe</h1>
-          <MoveRight color="#F3B659" />
         </div>
 
       </div>

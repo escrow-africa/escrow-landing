@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2">
               <div className="relative h-8 w-auto aspect-[3/1] flex items-center gap-1">
                 <Image
                   src="/logo.png"
@@ -37,11 +37,11 @@ export default function Navbar() {
                   <span className="text-[#F3B659]">Africa</span>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 ">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
             <Link
               href="/about"
               className={`relative group ${isActive("/about") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="#our-services"
+              href="/#our-services"
               className={`relative group ${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Our Services
@@ -62,7 +62,7 @@ export default function Navbar() {
               ></span>
             </Link>
             <Link
-              href="#team"
+              href="/#team"
               className={`relative group ${isActive("#team") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Team
@@ -71,7 +71,7 @@ export default function Navbar() {
               ></span>
             </Link>
             <Link
-              href="#faq"
+              href="/#faq"
               className={`relative group ${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               FAQs
@@ -91,23 +91,23 @@ export default function Navbar() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/login"
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
+            <a
+              href="http://localhost:3000/login"
               className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-1  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}
             >
               <span className="relative z-10">Log in</span>
-            </Link>
-            <Link
-              href="/signup"
+            </a>
+            <a
+              href="http://localhost:3000/signup"
               className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
             >
               Create Account
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button placeholder */}
-          <div className="md:hidden flex items-center ">
+          <div className="lg:hidden flex items-center ">
             <button className="text-gray-600 p-2" onClick={toggleMenu}>
               {isOpen ? (
                 <X size={32} color="#F3B659" />
@@ -118,48 +118,48 @@ export default function Navbar() {
             {isOpen && (
               <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
                 <Link
-                  href="#why-escrow"
+                  href="/#why-escrow"
                   className={`${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
                   Why Escrow
                 </Link>
                 <Link
-                  href="#our-services"
+                  href="/#our-services"
                   className={`${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
                   Our Services
                 </Link>
                 <Link
-                  href="#teams"
+                  href="/#teams"
                   className={`${isActive("#teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
                   Teams
                 </Link>
 
-                <Link href="#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                <Link href="/#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
                   FAQs
                 </Link>
                 <Link href="/blog" className={`${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
                   Blog
                 </Link>
-                <Link
-                  href="/login"
+                <a
+                  href="http://localhost:3000/login"
                   className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
                   onClick={toggleMenu}
                 >
 
                   Log In
-                </Link>
-                <Link
-                  href="/signup"
+                </a>
+                <a
+                  href="http://localhost:3000/signup"
                   className={`${isActive("/signup") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
                   onClick={toggleMenu}
                 >
                   Create Account
-                </Link>
+                </a>
               </div>
             )}
           </div>
