@@ -93,15 +93,13 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             <a
-              href="http://localhost:3000/login"
-              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-1  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}
-            >
+              href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}
+              className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} border-2 border-[#F3B659] font-medium px-4 py-1  hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors relative group overflow-hidden`}>
               <span className="relative z-10">Log in</span>
             </a>
             <a
-              href="http://localhost:3000/signup"
-              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300"
-            >
+              href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
+              className="bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium hover:bg-[#062B22] hover:text-[#F3B659] transition-all duration-300">
               Create Account
             </a>
           </div>
@@ -146,18 +144,16 @@ export default function Navbar() {
                   Blog
                 </Link>
                 <a
-                  href="http://localhost:3000/login"
+                  href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}
                   className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
-                  onClick={toggleMenu}
-                >
+                  onClick={toggleMenu}>
 
                   Log In
                 </a>
                 <a
-                  href="http://localhost:3000/signup"
+                  href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
                   className={`${isActive("/signup") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
-                  onClick={toggleMenu}
-                >
+                  onClick={toggleMenu}>
                   Create Account
                 </a>
               </div>

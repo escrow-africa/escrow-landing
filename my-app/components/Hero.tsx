@@ -173,7 +173,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="http://localhost:3000/signup"
+                href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-all shadow-lg shadow-blue-600/20"
               >
                 Start a Transaction

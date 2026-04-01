@@ -12,7 +12,7 @@ import Services from "@/components/Services";
 export default function Home() {
   return (
     <div className=" bg-white">
-      <Navbar />
+      
       <Hero />
       <Features />
       <Services />
@@ -20,7 +20,7 @@ export default function Home() {
       <FAQ />
       <WorkFlow /> 
       <CTA />
-      <Footer />
+      
     </div>
   );
 }
