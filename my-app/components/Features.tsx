@@ -78,19 +78,19 @@ const Features = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full"
+                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:bg-[#F3B659]  transition-shadow group flex flex-col h-full"
               >
                 <div
-                  className={`card-icon ${feature.iconBg} group-hover:bg-white/20`}
+                  className={`card-icon ${feature.iconBg}`}
                 >
-                  <Icon className="w-6 h-6 group-hover:text-white" />
+                  <Icon className="w-6 h-6 " />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-white">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 ">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600 group-hover:text-white/90">
+                <p className="text-gray-600  ">
                   {feature.description}
                 </p>
               </div>

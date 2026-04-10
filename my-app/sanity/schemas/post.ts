@@ -52,6 +52,12 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'A short summary of the post',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',

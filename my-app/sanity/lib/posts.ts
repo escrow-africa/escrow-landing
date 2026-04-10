@@ -30,6 +30,7 @@ export interface SanityPost extends SanityPostSummary {
   body?: unknown[]
 }
 
+
 export async function getAllPosts(): Promise<SanityPostSummary[]> {
   const query = groq`*[_type == 'post'] | order(publishedAt desc) {
     _id,
@@ -46,12 +47,18 @@ export async function getAllPosts(): Promise<SanityPostSummary[]> {
     },
     mainImage,
     publishedAt,
-    "excerpt": pt::text(body)[0...200],
+    excerpt,
   }`
 
   return client.fetch(query)
 }
+export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
+  const query = groq`*[_type == "post" && defined(slug.current)]{
+    "slug": slug.current
+  }`
 
+  return client.fetch(query)
+}
 export async function getPostBySlug(slug: string): Promise<SanityPost | null> {
   const query = groq`*[_type == 'post' && slug.current == $slug][0] {
     _id,
@@ -71,13 +78,29 @@ export async function getPostBySlug(slug: string): Promise<SanityPost | null> {
     body,
   }`
 
-  return client.fetch(query, { slug })
+  return  client.fetch(query, { slug })
 }
 
-export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
-  const query = groq`*[_type == 'post' && defined(slug.current)] {
-    "slug": slug.current
+export async function getRelatedPosts(categories: string[], currentPostId: string): Promise<SanityPostSummary[]> {
+  if (!categories || categories.length === 0) return []
+
+  const query = groq`*[_type == 'post' && _id != $currentPostId && count((categories[]->title)[@ in $categories]) > 0] | order(publishedAt desc)[0...3] {
+    _id,
+    title,
+    slug {
+      current
+    },
+    "author": author-> {
+      name,
+      image
+    },
+    "categories": categories[]-> {
+      title
+    },
+    mainImage,
+    publishedAt,
+    excerpt,
   }`
 
-  return client.fetch(query)
+  return client.fetch(query, { categories, currentPostId })
 }
