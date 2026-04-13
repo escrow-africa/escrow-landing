@@ -7,7 +7,7 @@ const founder = { name: "Idundun Louis", role: "Founder & CEO", image: "/Louise.
 
 const managementTeam = [
   { name: "Idundun Louis", role: "Founder/CEO", image: "/Louise.jpeg" },
-  { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg" },
+  { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg", linkedin: "https://linkedin.com/in/oludefiyinfoluwa" },
   { name: "Lawreta", role: "Heading of Marketing", image: "/lawreta.jpeg" },
   { name: " Madeline", role: "Head of product", image: "" },
   { name: "Adebiyi Esther", role: "Head of Media and Publicity", image: "/P1.jpeg", linkedin: "https://www.linkedin.com/in/adebiyi-esther-966373364?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
@@ -16,7 +16,7 @@ const managementTeam = [
 
 const engineeringTeam = [
   { name: "Idundun Louis", role: "Founder/CTO", image: "/Louise.jpeg" },
-  { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg" },
+  { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg", linkedin: "https://linkedin.com/in/oludefiyinfoluwa" },
   { name: "Okoduwa Joy", role: "Lead Frontend Engineer", image: "/joy.jpeg" },
 ];
 
