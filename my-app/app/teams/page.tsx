@@ -10,7 +10,7 @@ const managementTeam = [
   { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg" },
   { name: "Lawreta", role: "Heading of Marketing", image: "/lawreta.jpeg" },
   { name: " Madeline", role: "Head of product", image: "" },
-  { name: "Esther", role: "Head of Media and Publicity", image: "/P1.jpeg" },
+  { name: "Adebiyi Esther", role: "Head of Media and Publicity", image: "/P1.jpeg", linkedin: "https://www.linkedin.com/in/adebiyi-esther-966373364?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
   { name: "Amara", role: "Head of Legal, Risk and Compliance", image: "/P2.jpeg" },
 ];
 
@@ -21,8 +21,8 @@ const engineeringTeam = [
 ];
 
 const mediaTeam = [
-  { name: "Esther", role: "Head of Media and Publicity", image: "/P1.jpeg" },
-  { name: "Seun", role: "Lead Content Creator and Community Manager", image: "" },
+  { name: " Adebiyi Esther", role: "Head of Media and Publicity", image: "/P1.jpeg", linkedin: "https://www.linkedin.com/in/adebiyi-esther-966373364?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
+  { name: "Afolabi Oluwaseun", role: "Lead Content Creator and Community Manager", image: "/P4.jpeg" },
 ];
 
 const staggerContainer = {
@@ -207,7 +207,7 @@ export default function TeamsPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Want to join our amazing team?</h2>
           <p className="text-xl text-[#F3B659] mb-10">We are always looking for talented individuals to help us build the future.</p>
-          <button 
+          <button
             className="btn-primary min-w-[200px]"
             onClick={() => setBtnText(prev => prev === "View Open Positions" ? "No available position at the moment" : "View Open Positions")}
           >
