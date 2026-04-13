@@ -62,8 +62,8 @@ export default function Navbar() {
               ></span>
             </Link>
             <Link
-              href="/#team"
-              className={`relative group ${isActive("#team") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+              href="/teams"
+              className={`relative group ${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
               Team
               <span
@@ -130,8 +130,8 @@ export default function Navbar() {
                   Our Services
                 </Link>
                 <Link
-                  href="/#teams"
-                  className={`${isActive("#teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  href="/teams"
+                  className={`${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
                   Teams
