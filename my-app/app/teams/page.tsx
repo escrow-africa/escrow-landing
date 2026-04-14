@@ -8,16 +8,16 @@ const founder = { name: "Idundun Louis", role: "Founder & CEO", image: "/Louise.
 const managementTeam = [
   { name: "Idundun Louis", role: "Founder/CEO", image: "/Louise.jpeg" },
   { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg", linkedin: "https://linkedin.com/in/oludefiyinfoluwa" },
-  { name: "Lawreta", role: "Heading of Marketing", image: "/lawreta.jpeg" },
-  { name: " Madeline", role: "Head of product", image: "" },
+  { name: "Odubela Lawreta", role: "Head of Marketing and Sales", image: "/lawreta.jpeg" },
+  { name: " Madeline", role: "Head of product", image: "/madeline.jpeg", linkedin: "https://www.linkedin.com/in/anagha-madeleine?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
   { name: "Adebiyi Esther", role: "Head of Media and Publicity", image: "/P1.jpeg", linkedin: "https://www.linkedin.com/in/adebiyi-esther-966373364?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
-  { name: "Amara", role: "Head of Legal, Risk and Compliance", image: "/P2.jpeg" },
+  { name: "Omofe Amara", role: "Head of Legal, Risk and Compliance", image: "/P2.jpeg", bio: "A.C. Omefe is a qualified legal practitioner focused on technology, finance, corporate governance, and regulatory compliance. She is a graduate of the University of Lagos and has since built a growing profile in fintech, energy technology and financial law, applying legal insight to evolving digital and financial ecosystems." },
 ];
 
 const engineeringTeam = [
   { name: "Idundun Louis", role: "Founder/CTO", image: "/Louise.jpeg" },
   { name: "Olude Fiyinfoluwa", role: "Head of Engineering", image: "/fiyin.jpeg", linkedin: "https://linkedin.com/in/oludefiyinfoluwa" },
-  { name: "Okoduwa Joy", role: "Lead Frontend Engineer", image: "/joy.jpeg" },
+  { name: "Okoduwa Joy", role: "Lead Frontend Engineer", image: "/joy.jpeg", bio: "Okoduwa Joy is a frontend developer dedicated to crafting high-performance, user-centered web experiences. She combines clean code with thoughtful design to build products that are both functional and engaging." },
 ];
 
 const mediaTeam = [
@@ -40,12 +40,21 @@ const fadeInUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-function TeamMemberCard({ member, featured = false }: { member: { name: string; role: string; image: string; linkedin?: string }, featured?: boolean }) {
+function TeamMemberCard({ member, featured = false }: { member: { name: string; role: string; image: string; linkedin?: string; bio?: string }, featured?: boolean }) {
   return (
     <motion.div variants={fadeInUp} className={`relative overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-sm transition-all duration-500 flex flex-col ${featured ? 'md:flex-row' : ''}`}>
-      <div className={`relative bg-gray-100 flex items-center justify-center overflow-hidden ${featured ? 'md:w-2/5 aspect-square md:aspect-auto' : 'aspect-square'}`}>
+      <div className={`relative bg-gray-100 flex items-center justify-center overflow-hidden group ${featured ? 'md:w-2/5 aspect-square md:aspect-auto' : 'aspect-square'}`}>
         {member.image && (
-          <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+          <>
+            <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            {member.bio && !featured && (
+              <div className="absolute inset-0 bg-[#062B22]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex items-center justify-center backdrop-blur-sm">
+                <p className="text-white text-sm text-center leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
+            )}
+          </>
         )}
       </div>
       <div className={`p-8 md:p-10 flex flex-col justify-center flex-1 ${featured ? 'bg-[#0B493A] text-white' : ''}`}>
