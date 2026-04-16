@@ -86,7 +86,7 @@ const BlogPostPage = async ({ params }: Props) => {
 
       
         <div className="prose prose-slate max-w-none">
-          <PortableText value={post.body || []} /> 
+          <PortableText value={(post.body as any) || []} /> 
         </div>
       </article>
     </div>

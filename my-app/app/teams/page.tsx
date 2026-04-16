@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const managementTeam = [
   { name: "Idundun Louis", role: "Founder/CEO", image: "/Louise.jpeg", bio: "Louis Idundun is a software engineer with a background in civil engineering. He specializes in building scalable backend systems and fintech products. With experience across engineering, operations, and product development, he leads EscrowAfrica NG as Founder & CTO, building the future of trusted online commerce." },
@@ -23,7 +23,7 @@ const mediaTeam = [
   { name: "Afolabi Oluwaseun", role: "Lead Content Creator and Community Manager", image: "/P4.jpeg" },
 ];
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -33,7 +33,7 @@ const staggerContainer = {
   },
 };
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
