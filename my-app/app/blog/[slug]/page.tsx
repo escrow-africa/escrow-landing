@@ -34,15 +34,15 @@ const BlogPostPage = async ({ params }: Props) => {
   }
 
   return (
-    <div className="px-4 py-12 mx-auto max-w-4xl">
+    <div className="px-4 pt-24 pb-12 mx-auto max-w-4xl">
       <article>
-        <h1 className="text-3xl font-bold my-6">{post.title}</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold my-6 leading-tight">{post.title}</h1>
         <p className="text-sm text-gray-500 mb-6">
           {formatDate(post.publishedAt)}
         </p>
 
         {post.mainImage?.asset && (
-          <div className="relative h-72 w-full mb-6 rounded-lg overflow-hidden">
+          <div className="relative h-56 md:h-80 lg:h-[450px] w-full mb-8 rounded-xl overflow-hidden">
             <Image
               src={urlFor(post.mainImage).width(1600).height(900).url()}
               alt={post.mainImage.alt || post.title}

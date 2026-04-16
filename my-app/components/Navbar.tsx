@@ -116,11 +116,11 @@ export default function Navbar() {
             {isOpen && (
               <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
                 <Link
-                  href="/#why-escrow"
-                  className={`${isActive("#why-escrow") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  href="/about"
+                  className={`${isActive("/about") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
-                  Why Escrow
+                  About Us
                 </Link>
                 <Link
                   href="/#our-services"
@@ -134,7 +134,7 @@ export default function Navbar() {
                   className={`${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
                   onClick={toggleMenu}
                 >
-                  Teams
+                  Team
                 </Link>
 
                 <Link href="/#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>

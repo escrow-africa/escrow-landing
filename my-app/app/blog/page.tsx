@@ -32,18 +32,18 @@ const Blog = async () => {
       <h1 className="text-4xl font-bold mb-8">Blog</h1>
       
       {/* Top section: Recent blog (3/4) and Top 3 Most Read (1/4) */}
-      <div className="flex gap-8 mb-12">
+      <div className="flex flex-col lg:flex-row gap-8 mb-12">
         {/* Recent Blog - 3/4 width */}
-        <div className="w-3/4">
+        <div className="w-full lg:w-3/4">
           {recentPost && (
             <article className="overflow-hidden rounded-xl border border-slate-200">
               {recentPost.mainImage?.asset && (
-                <Link href={`/blog/${recentPost.slug.current}`} className="relative block h-80 w-full">
+                <Link href={`/blog/${recentPost.slug.current}`} className="relative block h-64 md:h-80 w-full">
                   <Image
                     src={urlFor(recentPost.mainImage).width(1200).height(700).url()}
                     alt={recentPost.mainImage.alt || recentPost.title}
                     fill
-                    sizes="75vw"
+                    sizes="(max-width: 1024px) 100vw, 75vw"
                     className="object-cover"
                   />
                 </Link>
@@ -51,10 +51,10 @@ const Blog = async () => {
 
               <div className="p-6">
                 <Link href={`/blog/${recentPost.slug.current}`} className="no-underline">
-                  <h2 className="text-3xl font-semibold hover:text-blue-600 mb-3">{recentPost.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-semibold hover:text-[#0B493A] mb-3">{recentPost.title}</h2>
                 </Link>
                 <p className="text-sm text-gray-500 mb-4">{formatDate(recentPost.publishedAt)}</p>
-                <p className="text-lg text-gray-700 mb-4">{recentPost.excerpt || 'No excerpt available'}</p>
+                <p className="text-base md:text-lg text-gray-700 mb-4">{recentPost.excerpt || 'No excerpt available'}</p>
 
                 <div className="flex items-center gap-3 text-sm text-gray-600 mb-4">
                   {recentPost.author?.image && (
@@ -84,7 +84,7 @@ const Blog = async () => {
         </div>
 
         {/* Top 3 Most Read - 1/4 width */}
-        <div className="w-1/4">
+        <div className="w-full lg:w-1/4">
           <h3 className="text-xl font-semibold mb-6">Top 3 Most Read</h3>
           <div className="space-y-4">
             {topReadPosts.map((post: SanityPostSummary) => (
