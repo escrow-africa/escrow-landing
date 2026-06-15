@@ -114,48 +114,60 @@ export default function Navbar() {
               )}
             </button>
             {isOpen && (
-              <div className="  absolute top-16 left-0 w-full bg-[#062B22] rounded-md h-fit border-t border-gray-100 flex flex-col items-center gap-4 py-6 hover:underline">
+              <div className="fixed top-16 left-0 w-full h-[calc(100vh-4rem)] bg-[#062B22] border-t border-white/10 flex flex-col items-center justify-start gap-6 py-12 px-6 overflow-y-auto z-50">
                 <Link
                   href="/about"
-                  className={`${isActive("/about") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  className={`text-xl font-medium ${isActive("/about") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
                   onClick={toggleMenu}
                 >
                   About Us
                 </Link>
                 <Link
                   href="/#our-services"
-                  className={`${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  className={`text-xl font-medium ${isActive("#our-services") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
                   onClick={toggleMenu}
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/teams"
-                  className={`${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`}
+                  className={`text-xl font-medium ${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
                   onClick={toggleMenu}
                 >
                   Team
                 </Link>
 
-                <Link href="/#faq" className={`${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                <Link
+                  href="/#faq"
+                  className={`text-xl font-medium ${isActive("#faq") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
+                  onClick={toggleMenu}
+                >
                   FAQs
                 </Link>
-                <Link href="/blog" className={`${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline`} onClick={toggleMenu}>
+                <Link
+                  href="/blog"
+                  className={`text-xl font-medium ${isActive("/blog") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
+                  onClick={toggleMenu}
+                >
                   Blog
                 </Link>
-                <a
-                  href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}
-                  className={`${isActive("/login") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
-                  onClick={toggleMenu}>
-
-                  Log In
-                </a>
-                <a
-                  href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
-                  className={`${isActive("/signup") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] hover:underline border-2 border-[#F3B659] px-4 py-1 rounded-full font-medium`}
-                  onClick={toggleMenu}>
-                  Create Account
-                </a>
+                
+                <div className="w-full flex flex-col items-center gap-4 mt-8">
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}
+                    className="w-full max-w-xs text-center border-2 border-[#F3B659] text-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] py-3 rounded-full font-semibold transition-all duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Log In
+                  </a>
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
+                    className="w-full max-w-xs text-center bg-[#F3B659] text-[#062B22] border-2 border-[#F3B659] py-3 rounded-full font-semibold hover:bg-transparent hover:text-[#F3B659] transition-all duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Create Account
+                  </a>
+                </div>
               </div>
             )}
           </div>

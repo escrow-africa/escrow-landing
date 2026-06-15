@@ -100,8 +100,7 @@ export default function TeamsPage() {
           </motion.div>
         </div>
 
-        {/* Decorative divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#FAFAFA]" style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 0)' }}></div>
+        
       </section>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32 space-y-32">
