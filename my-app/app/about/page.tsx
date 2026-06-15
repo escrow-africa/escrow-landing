@@ -359,20 +359,20 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeInUp} className="bg-[#062B22] rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden text-left mt-16 flex flex-col md:flex-row items-center justify-between gap-12">
+          <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeInUp} className="bg-[#062B22] rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-20 shadow-2xl relative overflow-hidden text-center md:text-left mt-16 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F3B659] mix-blend-multiply filter blur-[150px] opacity-40 rounded-full translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="relative z-10 md:w-2/3">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Join Us on Our Mission</h3>
-              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Join Us on Our Mission</h3>
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0">
                 Whether you’re a buyer, seller, or business owner, EscrowAfrica NG is here to help you transact with confidence.
               </p>
             </div>
 
-            <div className="relative z-10 shrink-0">
-              <button className="bg-[#F3B659] text-[#062B22] font-bold text-lg py-4 px-10 rounded-full hover:bg-white transition-colors duration-300 shadow-lg flex items-center gap-3 group">
+            <div className="relative z-10 shrink-0 w-full md:w-auto flex justify-center">
+              <button className="w-full md:w-auto bg-[#F3B659] text-[#062B22] font-bold text-base sm:text-lg py-3.5 px-6 sm:px-8 rounded-full hover:bg-white transition-colors duration-300 shadow-lg flex items-center justify-center gap-2.5 sm:gap-3 group">
                 Join our growing community
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
               </button>
             </div>
           </motion.div>
