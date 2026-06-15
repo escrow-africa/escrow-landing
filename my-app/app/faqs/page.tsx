@@ -37,50 +37,48 @@ export default function FAQ() {
     };
 
     return (
-        <section className="py-20" id="faq">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#062B22] mb-4">
-                        Frequently Asked Questions
-                    </h2>
-                    <p className="text-lg text-gray-600">
-                        Have questions? We're here to help.
-                    </p>
-                </div>
+        <div className="min-h-screen bg-[#FAFAFA] pt-28 pb-12">
+            <section className="py-8" id="faq">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#062B22] mb-4">
+                            Frequently Asked Questions
+                        </h2>
+                        <p className="text-lg text-gray-600">
+                            Have questions? We're here to help.
+                        </p>
+                    </div>
 
-                <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-md"
-                        >
-                            <button
-                                className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
-                                onClick={() => toggleAccordion(index)}
-                            >
-                                <span className="font-semibold text-[#062B22] text-lg">
-                                    {faq.question}
-                                </span>
-                                {openIndex === index ? (
-                                    <FontAwesomeIcon icon={faChevronUp} className="w-5 h-5 text-[#F3B659]" />
-                                ) : (
-                                    <FontAwesomeIcon icon={faChevronDown} className="w-5 h-5 text-gray-400" />
-                                )}
-                            </button>
+                    <div className="space-y-4">
+                        {faqs.map((faq, index) => (
                             <div
-                                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-40 pb-5 opacity-100" : "max-h-0 opacity-0"
-                                    }`}
+                                key={index}
+                                className="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-md"
                             >
-                                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                                <button
+                                    className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                                    onClick={() => toggleAccordion(index)}
+                                >
+                                    <span className="font-semibold text-[#062B22] text-lg">
+                                        {faq.question}
+                                    </span>
+                                    {openIndex === index ? (
+                                        <FontAwesomeIcon icon={faChevronUp} className="w-5 h-5 text-[#F3B659]" />
+                                    ) : (
+                                        <FontAwesomeIcon icon={faChevronDown} className="w-5 h-5 text-gray-400" />
+                                    )}
+                                </button>
+                                <div
+                                    className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-40 pb-5 opacity-100" : "max-h-0 opacity-0"
+                                        }`}
+                                >
+                                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-
-                <div className="mt-10 flex justify-center">
-
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }

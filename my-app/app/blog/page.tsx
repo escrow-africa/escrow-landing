@@ -16,9 +16,11 @@ const Blog = async () => {
 
   if (!posts || posts.length === 0) {
     return (
-      <div className="px-4 py-12 mx-auto  max-w-5xl">
-        <h1 className="text-3xl font-bold mt-7">Blog</h1>
-        <p className="mt-4 text-gray-500">No posts found. Please add content in Sanity Studio.</p>
+      <div className="min-h-screen bg-[#FAFAFA] pt-28 pb-12">
+        <div className="px-4 mx-auto max-w-5xl">
+          <h1 className="text-3xl font-bold text-[#062B22]">Blog</h1>
+          <p className="mt-4 text-gray-500">No posts found. Please add content in Sanity Studio.</p>
+        </div>
       </div>
     )
   }
@@ -28,8 +30,9 @@ const Blog = async () => {
   const previousPosts = posts.slice(4, 9)
 
   return (
-    <main className="px-4 pt-24 pb-12 mx-auto max-w-7xl">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
+    <div className="min-h-screen bg-[#FAFAFA] pt-28 pb-12">
+      <main className="px-4 mx-auto max-w-7xl">
+        <h1 className="text-4xl font-bold mb-8 text-[#062B22]">Blog</h1>
       
       {/* Top section: Recent blog (3/4) and Top 3 Most Read (1/4) */}
       <div className="flex flex-col lg:flex-row gap-8 mb-12">
@@ -155,7 +158,8 @@ const Blog = async () => {
           ))}
         </div>
       </div>
-    </main>
+      </main>
+    </div>
   )
 }
 

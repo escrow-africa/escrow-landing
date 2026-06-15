@@ -34,9 +34,10 @@ const BlogPostPage = async ({ params }: Props) => {
   }
 
   return (
-    <div className="px-4 pt-24 pb-12 mx-auto max-w-4xl">
-      <article>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold my-6 leading-tight">{post.title}</h1>
+    <div className="min-h-screen bg-[#FAFAFA] pt-28 pb-12">
+      <div className="px-4 mx-auto max-w-4xl">
+        <article>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold my-6 leading-tight text-[#062B22]">{post.title}</h1>
         <p className="text-sm text-gray-500 mb-6">
           {formatDate(post.publishedAt)}
         </p>
@@ -89,6 +90,7 @@ const BlogPostPage = async ({ params }: Props) => {
           <PortableText value={(post.body as any) || []} /> 
         </div>
       </article>
+    </div>
     </div>
   )
 }
