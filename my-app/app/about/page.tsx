@@ -370,10 +370,13 @@ export default function AboutPage() {
             </div>
 
             <div className="relative z-10 shrink-0 w-full md:w-auto flex justify-center">
-              <button className="w-full md:w-auto bg-[#F3B659] text-[#062B22] font-bold text-base sm:text-lg py-3.5 px-6 sm:px-8 rounded-full hover:bg-white transition-colors duration-300 shadow-lg flex items-center justify-center gap-2.5 sm:gap-3 group">
+              <a
+                href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
+                className="w-full md:w-auto bg-[#F3B659] text-[#062B22] font-bold text-base sm:text-lg py-3.5 px-6 sm:px-8 rounded-full hover:bg-white transition-colors duration-300 shadow-lg flex items-center justify-center gap-2.5 sm:gap-3 group"
+              >
                 Join our growing community
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
