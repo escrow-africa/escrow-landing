@@ -81,7 +81,7 @@ export default function TeamsPage() {
   return (
     <div className="min-h-screen bg-[#FAFAFA]">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#062B22]">
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden bg-[#062B22]">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-[#F3B659] rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
         <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-[#0B493A] rounded-full mix-blend-multiply filter blur-[128px] opacity-40"></div>
