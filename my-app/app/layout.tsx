@@ -1,29 +1,15 @@
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-
-
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-import { Montserrat } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+import {  Plus_Jakarta_Sans} from "next/font/google";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
 });
+
 
 config.autoAddCss = false;
 
@@ -43,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased font-sans`}
+        className={jakarta.className}
       >
         <Navbar />
         {children}

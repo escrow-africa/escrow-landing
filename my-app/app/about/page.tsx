@@ -37,8 +37,8 @@ export default function AboutPage() {
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden bg-[#062B22]">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#F3B659] rounded-full mix-blend-multiply filter blur-[150px] opacity-20"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#0B493A] rounded-full mix-blend-multiply filter blur-[150px] opacity-40"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-125 h-125 bg-[#F3B659] rounded-full mix-blend-multiply filter blur-[150px] opacity-20"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-125 h-125 bg-[#0B493A] rounded-full mix-blend-multiply filter blur-[150px] opacity-40"></div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
           <motion.div initial="hidden" animate="show" variants={staggerContainer} className="max-w-4xl mx-auto">
@@ -56,8 +56,7 @@ export default function AboutPage() {
           </motion.div>
         </div>
 
-        {/* Decorative Divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-[#FAFAFA]" style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 0)' }}></div>
+  
       </section>
 
       {/* 2. Intro / The Problem We're Solving */}

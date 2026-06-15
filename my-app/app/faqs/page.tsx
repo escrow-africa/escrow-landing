@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 
