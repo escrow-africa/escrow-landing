@@ -67,7 +67,7 @@ export default function AboutPage() {
             initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
             className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start"
           >
-            <motion.div variants={fadeInUp} className="lg:col-span-5 sticky top-32">
+            <motion.div variants={fadeInUp} className="lg:col-span-5 lg:sticky lg:top-32">
               <h2 className="text-4xl md:text-5xl font-bold text-[#062B22] leading-tight mb-6">
                 The Problem <br /><span className="text-gray-400 font-light">We're Solving.</span>
               </h2>
