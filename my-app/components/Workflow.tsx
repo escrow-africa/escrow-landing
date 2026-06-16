@@ -8,40 +8,40 @@ const WorkFlow = () => {
       img: "/ecommerce.png",
       alt: "E-commerce",
       description:
-        "Protect online purchases from fraud and non-delivery. Funds are only released when the buyer confirms receipt.",
+        "Protect online purchases from fraud and non-delivery.",
     },
     {
       title: "Car Sales",
       img: "/car-sales.png",
       alt: "Car sales",
       description:
-        "Avoid risky transfers and fake payment proofs. Secure large payments until ownership and documentation are verified.",
+        "Secure large payments until ownership and documentation are verified.",
     },
     {
       title: "Property Rentals",
       img: "/rental.png",
       alt: "Property rentals",
       description:
-        "Protect deposits and advance rent payments. Release funds only after keys and agreement terms are confirmed.",
+        "Release funds only after keys and agreement terms are confirmed.",
     },
     {
       title: "Freelance Services",
       img: "/freelance.png",
       alt: "Freelance services",
       description:
-        "No more “work delivered, payment missing.” Clients deposit upfront — funds release when work is approved.",
+        "Clients deposit upfront and funds is released when work is approved.",
     },
     {
       title: "Instagram Vendors",
       img: "/insta-vendor.png",
       alt: "Instagram vendors",
       description:
-        "Sell confidently on social media. Customers pay into secure escrow — you ship without fear of chargebacks.",
+        "Sell confidently on social media. Customers pay into secure escrow and you ship without fear of chargebacks.",
     },
   ];
 
   return (
-    <section className="py-20 lg:py-24">
+    <section className="pb-15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
@@ -59,9 +59,9 @@ const WorkFlow = () => {
                 <Image
                   src={card.img}
                   alt={card.alt}
-                  width={120}
+                  width={150}
                   height={120}
-                  className="object-contain"
+                  className="object-contain rounded-lg"
                 />
               </div>
 

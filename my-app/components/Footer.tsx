@@ -31,7 +31,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-500">
               <li>
                 <Link
-                  href="#"
+                  href="/#features"
                   className="hover:text-[#F3B659] transition-colors"
                 >
                   Features
@@ -61,7 +61,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-500">
               <li>
                 <Link
-                  href="#"
+                  href="/about"
                   className="hover:text-[#F3B659] transition-colors"
                 >
                   About Us
@@ -69,18 +69,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/faqs"
                   className="hover:text-[#F3B659] transition-colors"
                 >
-                  Careers
+                 FAQ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/blog"
                   className="hover:text-[#F3B659] transition-colors"
                 >
-                  Contact
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#our-services"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Services
                 </Link>
               </li>
             </ul>
