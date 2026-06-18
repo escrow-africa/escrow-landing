@@ -15,6 +15,7 @@
     "@fortawesome/react-fontawesome": "^3.2.0",
     "@portabletext/react": "^6.0.3",
     "@sanity/vision": "^5.18.0",
+    "cloudinary": "^2.10.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.563.0",
