@@ -1,9 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
-import WaitlistModal from "../components/WaitlistModal";
 const CTA = () => {
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-
   return (
 
     <section className="py-20 bg-[#0B493A]">
@@ -15,27 +11,23 @@ const CTA = () => {
           Join thousands of others who use our platform for safe, reliable,
           and fast escrow services.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <a
             href="http://localhost:3000/signup"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-colors"
+            className=" sm:w-auto inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-colors"
           >
             Get Started Now
           </a>
 
-          <button
-            onClick={() => setIsWaitlistOpen(true)}
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-base font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors"
+          <Link
+            href="/waitlist"
+            className="w-auto inline-flex items-center justify-center px-8 py-3 font-medium text-[#F3B659] border-2 border-[#F3B659] hover:bg-[#F3B659] hover:text-[#062B22] rounded-full transition-colors"
           >
             Join the Waitlist
-          </button>
+          </Link>
         </div>
 
       </div>
-      <WaitlistModal
-        isOpen={isWaitlistOpen}
-        onClose={() => setIsWaitlistOpen(false)}
-      />
     </section>
 
   )

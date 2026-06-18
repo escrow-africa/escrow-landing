@@ -25,7 +25,7 @@ export default function Navbar() {
             <a href="/" className="flex items-center gap-2">
               <div className="relative h-8 w-auto aspect-[3/1] flex items-center gap-1">
                 <Image
-                  src="/logo.png"
+                  src="https://res.cloudinary.com/drpuv22rm/image/upload/v1781797760/logo_wldlmg.png"
                   alt="Escrow Logo"
                   width={35}
                   height={50}
@@ -105,7 +105,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button placeholder */}
-          <div className="lg:hidden flex items-center ">
+          <div className="flex items-center lg:hidden">
             <button className="text-gray-600 p-2" onClick={toggleMenu}>
               {isOpen ? (
                 <X size={32} color="#F3B659" />

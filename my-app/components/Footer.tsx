@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <a href="/" className="inline-block mb-6 shadow-lg rounded-full">
               <Image
-                src="/10.png"
+                src="https://res.cloudinary.com/drpuv22rm/image/upload/v1781797743/10_yvcfec.png"
                 alt="Escrow Logo"
                 width={120}
                 height={40}
