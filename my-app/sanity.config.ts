@@ -3,8 +3,11 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schema'
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'your_project_id_here'
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
+
+console.log('SANITY PROJECT ID:', projectId)
+console.log('SANITY DATASET:', dataset)
 
 export default defineConfig({
   basePath: '/studio',

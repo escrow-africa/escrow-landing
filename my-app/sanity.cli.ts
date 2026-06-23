@@ -5,7 +5,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 
 export default defineCliConfig({
   api: {
-    projectId: projectId || 'nt8wpm0k',
-    dataset: dataset || 'production'
+    projectId: projectId ,
+    dataset: dataset,
   }
 })
