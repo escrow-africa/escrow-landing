@@ -39,7 +39,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/security"
                   className="hover:text-[#F3B659] transition-colors"
                 >
                   Security
