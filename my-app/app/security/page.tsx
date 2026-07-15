@@ -6,7 +6,7 @@ export default function SecurityPage() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Hero */}
-      <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12 mb-10">
+      <section className="bg-white  p-8 md:p-12 mb-10">
         <div className="md:flex md:items-center md:justify-between gap-8">
           <div className="md:flex-1">
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#062B22]">EscrowAfrica Security Center</h1>
@@ -19,7 +19,7 @@ export default function SecurityPage() {
             </div>
           </div>
 
-          <div className="md:w-44 md:flex-shrink-0 mt-6 md:mt-0">
+          <div className="md:w-44 md:shrink-0 mt-6 md:mt-0">
             <div className="bg-[#062B22] rounded-xl p-4 shadow-lg flex items-center justify-center">
               <Image src="/padlock.png" alt="Padlock" width={120} height={120} className="object-contain" />
             </div>

@@ -62,6 +62,15 @@ export default function Navbar() {
               ></span>
             </Link>
             <Link
+              href="/pricing"
+              className={`relative group ${isActive("/pricing") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
+            >
+              Pricing
+              <span
+                className={`absolute left-0 bottom-0 w-0 h-[2px] bg-[#F3B659] transition-all duration-300 group-hover:w-full ${isActive("#how-it-works") ? "w-0" : ""}`}
+              ></span>
+            </Link>
+            <Link
               href="/teams"
               className={`relative group ${isActive("/teams") ? "text-white" : "text-[#F3B659]"} hover:text-[#F3B659] font-medium transition-colors`}
             >
@@ -128,6 +137,13 @@ export default function Navbar() {
                   onClick={toggleMenu}
                 >
                   Our Services
+                </Link>
+                <Link
+                  href="/pricing"
+                  className={`text-xl font-medium ${isActive("/pricing") ? "text-white" : "text-[#F3B659]"} hover:text-white transition-colors`}
+                  onClick={toggleMenu}
+                >
+                  Pricing
                 </Link>
                 <Link
                   href="/teams"
