@@ -24,9 +24,7 @@ export default function Footer() {
                 className="object-contain"
               />
             </a>
-            <p className="text-xs text-gray-500 mt-2 max-w-xs leading-relaxed">
-              Escrow Africa provides secure, digital escrow services across Africa. Eliminate payment anxiety and transact with absolute trust.
-            </p>
+            
           </div>
 
           <div>
@@ -154,14 +152,7 @@ export default function Footer() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+              
               <li>
                 <Link
                   href="/buyer-protection-policy"
