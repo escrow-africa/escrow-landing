@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ShieldCheck, Clock, ArrowLeft, FileText, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, ArrowLeft, FileText } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
