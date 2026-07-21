@@ -1,21 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { Scale, Clock, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Scale, ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Compliance Center - Escrow Africa",
   description: "Explore the Escrow Africa Compliance Center. Read about our licensing, anti-money laundering (AML) controls, and regulatory adherence.",
 };
-
-const outlineItems = [
-  { title: "Anti-Money Laundering (AML) Compliance", desc: "Rigorous standards and systems to detect, prevent, and report money laundering activity." },
-  { title: "Counter-Terrorist Financing (CTF) Guidelines", desc: "Rules and screening procedures to ensure funds are not routed to sanctioned or prohibited entities." },
-  { title: "Regulatory Licenses & Compliance", desc: "Details on our operating licenses, legal entity structure, and compliance with local authorities." },
-  { title: "Internal Auditing & Fraud Controls", desc: "How we perform routine internal audits on transactions, ledger balances, and data security." },
-  { title: "Data Protection & Privacy compliance", desc: "Information on compliance with data protection laws (e.g., NDPR, GDPR) for user information." },
-  { title: "Whistleblower & Reporting Channels", desc: "Secure methods for users or partners to report suspicious activities, security bugs, or compliance violations." }
-];
 
 export default function ComplianceCenter() {
   return (
