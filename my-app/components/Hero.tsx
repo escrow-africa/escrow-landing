@@ -56,13 +56,13 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center lg:justify-start">
-              <a
-                href={`${process.env.NEXT_PUBLIC_APP_URL}/signup`}
+              <Link
+                href="/waitlist"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[#062B22] bg-[#F3B659] hover:bg-[#062B22] hover:text-[#F3B659] rounded-full transition-all shadow-lg shadow-blue-600/20"
               >
-                Start a Transaction
+                Join the Waitlist
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+              </Link>
 
               <Link
                 href="/#how-it-works"
