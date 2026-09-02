@@ -18,11 +18,7 @@ export default defineConfig({
   title: 'Blog CMS Studio',
 
   plugins: [structureTool(), visionTool()],
-document: {
-    actions: (prev) => {
-      return prev
-    },
-  },
+
   schema: {
     types: schemaTypes,
   },
