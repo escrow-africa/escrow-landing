@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Mail, User, CheckCircle2 } from "lucide-react";
+import { X, Mail, User, Phone, CheckCircle2 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,7 +12,9 @@ interface WaitlistModalProps {
 export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
   const overlay = useRef(null);
   const wrapper = useRef(null);
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -22,7 +24,9 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
    
     setTimeout(() => {
       setSubmitted(false);
-      setName("");
+      setFirstName("");
+      setLastName("");
+      setPhone("");
       setEmail("");
     }, 300);
   }, [onClose]);
@@ -85,10 +89,10 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               <X size={20} />
             </button>
 
-            <div className="p-8">
+            <div className="p-6 sm:p-8">
               {!submitted ? (
                 <>
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-5">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
                       <Mail className="w-6 h-6" />
                     </div>
@@ -100,13 +104,14 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
+                  <form onSubmit={handleSubmit} className="space-y-3">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
                       <label
-                        htmlFor="name"
+                        htmlFor="firstName"
                         className="block text-sm font-medium text-gray-700 mb-1"
                       >
-                        Name <span className="text-gray-400">(Optional)</span>
+                        First Name <span className="text-red-500">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
@@ -114,11 +119,58 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                         </div>
                         <input
                           type="text"
-                          id="name"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
+                          id="firstName"
+                          required
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
                           className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2.5 text-gray-900"
-                          placeholder="John Doe"
+                          placeholder="John"
+                        />
+                      </div>
+                      </div>
+
+                      <div>
+                      <label
+                        htmlFor="lastName"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Last Name <span className="text-red-500">*</span>
+                      </label>
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                          <User size={18} />
+                        </div>
+                        <input
+                          type="text"
+                          id="lastName"
+                          required
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
+                          className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2.5 text-gray-900"
+                          placeholder="Doe"
+                        />
+                      </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Phone Number <span className="text-gray-400">(Optional)</span>
+                      </label>
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                          <Phone size={18} />
+                        </div>
+                        <input
+                          type="tel"
+                          id="phone"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2.5 text-gray-900"
+                          placeholder="+234 800 000 0000"
                         />
                       </div>
                     </div>
@@ -187,10 +239,10 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    You're on the list!
+                    You&apos;re on the list!
                   </h2>
                   <p className="text-gray-600 mb-8">
-                    Thanks for joining. We'll verify your information and get back
+                    Thanks for joining. We&apos;ll verify your information and get back
                     to you shortly.
                   </p>
                   <button

@@ -1,11 +1,13 @@
 "use client";
 
-import { Mail, User, CheckCircle2, ArrowLeft } from "lucide-react";
+import { Mail, User, Phone, CheckCircle2, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
 export default function WaitlistPage() {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -23,7 +25,7 @@ export default function WaitlistPage() {
 
   return (
     <main className="min-h-screen bg-[#F7FAF8] flex items-center justify-center p-4 py-24 md:py-32">
-      <div className="w-full max-w-md bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative overflow-hidden">
+      <div className="w-full max-w-md bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#F3B659]/10 to-transparent rounded-bl-full pointer-events-none" />
         
         <Link
@@ -34,10 +36,10 @@ export default function WaitlistPage() {
           <span>Home</span>
         </Link>
 
-        <div className="mt-8">
+        <div className="mt-4">
           {!submitted ? (
             <>
-              <div className="text-center mb-8">
+              <div className="text-center mb-5">
                 <div className="w-12 h-12 bg-[#062B22]/5 rounded-2xl flex items-center justify-center mx-auto mb-4 text-[#062B22]">
                   <Mail className="w-6 h-6 text-[#F3B659]" />
                 </div>
@@ -49,13 +51,14 @@ export default function WaitlistPage() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
                   <label
-                    htmlFor="name"
+                    htmlFor="firstName"
                     className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1"
                   >
-                    Name <span className="text-gray-400">(Optional)</span>
+                    First Name <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
@@ -63,11 +66,58 @@ export default function WaitlistPage() {
                     </div>
                     <input
                       type="text"
-                      id="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      id="firstName"
+                      required
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       className="pl-10 block w-full rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-2 focus:ring-[#F3B659]/50 focus:border-[#F3B659] py-2.5 text-gray-900 text-sm focus:outline-none transition-all"
-                      placeholder="John Doe"
+                      placeholder="John"
+                    />
+                  </div>
+                  </div>
+
+                  <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1"
+                  >
+                    Last Name <span className="text-red-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                      <User size={18} />
+                    </div>
+                    <input
+                      type="text"
+                      id="lastName"
+                      required
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className="pl-10 block w-full rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-2 focus:ring-[#F3B659]/50 focus:border-[#F3B659] py-2.5 text-gray-900 text-sm focus:outline-none transition-all"
+                      placeholder="Doe"
+                    />
+                  </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1"
+                  >
+                    Phone Number <span className="text-gray-400">(Optional)</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                      <Phone size={18} />
+                    </div>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="pl-10 block w-full rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-2 focus:ring-[#F3B659]/50 focus:border-[#F3B659] py-2.5 text-gray-900 text-sm focus:outline-none transition-all"
+                      placeholder="+234 800 000 0000"
                     />
                   </div>
                 </div>
@@ -98,7 +148,7 @@ export default function WaitlistPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-xs text-sm font-semibold text-[#062B22] bg-[#F3B659] hover:bg-[#F3B659]/90 focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed transition-all mt-6 cursor-pointer"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-xs text-sm font-semibold text-[#062B22] bg-[#F3B659] hover:bg-[#F3B659]/90 focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed transition-all mt-4 cursor-pointer"
                 >
                   {loading ? (
                     <span className="flex items-center gap-2">
@@ -136,7 +186,7 @@ export default function WaitlistPage() {
                 <CheckCircle2 className="w-8 h-8 text-[#0B493A]" />
               </div>
               <h2 className="text-2xl font-bold text-[#062B22] mb-2">
-                You're on the list!
+                You&apos;re on the list!
               </h2>
               <p className="text-sm text-gray-500 mb-8 max-w-xs mx-auto leading-relaxed">
                 Thank you for joining our waitlist. We will notify you at <strong className="text-[#062B22]">{email}</strong> as soon as we launch.

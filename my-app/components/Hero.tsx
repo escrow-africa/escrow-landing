@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="text-center lg:text-left">
 
             {/* TYPING HERO TEXT */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#062B22] mb-6 leading-tight">
               {displayedText}
               <span className="text-[#F3B659]">{displayedHighlight}</span>
               {showCursor && <span className="animate-pulse ml-1">|</span>}
