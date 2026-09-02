@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
+    <footer className="bg-white border-t border-gray-300 pt-16 pb-8 h-[80vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
           <div className="col-span-1">
@@ -24,38 +24,13 @@ export default function Footer() {
                 className="object-contain"
               />
             </a>
+            <p className=" text-[#062B22] font-bold text-xl max-w-xs">
+  Secure your transaction with{" "}
+  <span className="text-[#F3B659] ">confidence</span>
+</p>
             
           </div>
 
-          <div>
-            <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Product</h3>
-            <ul className="space-y-3 text-sm text-gray-500">
-              <li>
-                <Link
-                  href="/#features"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/security"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Security
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           <div>
             <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Company</h3>
@@ -111,35 +86,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Trust & Safety</h3>
-            <ul className="space-y-3 text-sm text-gray-500">
-              <li>
-                <Link
-                  href="/compliance-center"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Compliance Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/kyc-identity-verification-policy"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  KYC & Identity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/fund-protection-policy"
-                  className="hover:text-[#F3B659] transition-colors"
-                >
-                  Fund Protection
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
 
           <div>
             <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Legal & Policies</h3>
@@ -179,9 +126,68 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+<div>
+            <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Trust & Safety</h3>
+            <ul className="space-y-3 text-sm text-gray-500">
+              <li>
+                <Link
+                  href="/compliance-center"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Compliance Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/kyc-identity-verification-policy"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  KYC & Identity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fund-protection-policy"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Fund Protection
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold text-[#062B22] mb-4 text-sm tracking-wider uppercase">Product</h3>
+            <ul className="space-y-3 text-sm text-gray-500">
+              <li>
+                <Link
+                  href="/#features"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/security"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Security
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="hover:text-[#F3B659] transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} Escrow Africa. All rights reserved.
           </p>
