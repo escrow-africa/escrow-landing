@@ -3,6 +3,8 @@
 import { Mail, User, Phone, CheckCircle2, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { toast } from "react-toastify";
+import { submitWaitlist } from "@/api/waitlist";
 
 export default function WaitlistPage() {
   const [firstName, setFirstName] = useState("");
@@ -16,11 +18,15 @@ export default function WaitlistPage() {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      await submitWaitlist({ firstName, lastName, phone, email });
+      setSubmitted(true);
+      toast.success("You have successfully joined the waitlist.");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Unable to join the waitlist. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

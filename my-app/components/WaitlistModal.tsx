@@ -3,6 +3,8 @@
 import { X, Mail, User, Phone, CheckCircle2 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from "react-toastify";
+import { submitWaitlist } from "@/api/waitlist";
 
 interface WaitlistModalProps {
   isOpen: boolean;
@@ -56,11 +58,15 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      await submitWaitlist({ firstName, lastName, phone, email });
+      setSubmitted(true);
+      toast.success("You have joined the waitlist.");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Unable to join the waitlist. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import {  Plus_Jakarta_Sans} from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const jakarta = Plus_Jakarta_Sans({
@@ -34,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ToastContainer position="top-right" autoClose={5000} />
 
       </body>
     </html>
